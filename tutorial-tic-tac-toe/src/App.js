@@ -61,7 +61,7 @@ export default function Game() {
 
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
-    setHistory([nextHistory]);
+    setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
     setXIsNext(!xIsNext);
   }
@@ -83,6 +83,7 @@ export default function Game() {
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     )
+
   });
 
   return (
